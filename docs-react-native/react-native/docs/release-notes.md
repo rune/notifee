@@ -5,10 +5,6 @@ next: /react-native/docs/usage
 previous: /react-native/docs/installation
 ---
 
-## 5.7.1
-- **[Android]**: Fixes an issue for Android 12 with quick actions when the app is in the background  (Fixes [#404](https://github.com/invertase/notifee/issues/404)).
-- **[Android]**: Quick workaround to always use `startService` instead of `startForegroundService` (Fixes [#592](https://github.com/invertase/notifee/issues/127)).
-
 ## 5.7.0
 - **[iOS]**: Adds new `interruptionLevel` property to `NotificationIOS` which provides the option to display time-sensitive notifications (Fixes [#287](https://github.com/invertase/notifee/issues/287)).
 
