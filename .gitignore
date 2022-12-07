@@ -545,9 +545,8 @@ Pods/*
 
 .idea/**/*
 **/Pods/**
-# Do not ignore the following files so that they can be accessed through GitHub repo
-# **/dist/
-# **/version.js
+**/dist/
+**/version.js
 typedoc.raw.json
 tests/ios/Firebase
 .tmp
