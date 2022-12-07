@@ -103,5 +103,6 @@
   "dependencies": {
     "axios": "^0.26.0",
     "shelljs": "^0.8.5"
-  }
+  },
+  "version": "0.0.1"
 }
