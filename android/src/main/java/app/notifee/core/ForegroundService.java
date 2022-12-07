@@ -17,6 +17,7 @@ package app.notifee.core;
  *
  */
 
+import android.util.Log;
 import android.app.Notification;
 import android.app.Service;
 import android.content.Intent;
@@ -49,8 +50,10 @@ public class ForegroundService extends Service {
     boolean startServiceWithPromise = false;
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && startServiceWithPromise) {
+      Log.d(TAG, "Using startForegroundService");
       ContextHolder.getApplicationContext().startForegroundService(intent);
     } else {
+      Log.d(TAG, "Using startService");
       ContextHolder.getApplicationContext().startService(intent);
     }
   }
