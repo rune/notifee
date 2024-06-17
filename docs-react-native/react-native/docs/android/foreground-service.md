@@ -209,4 +209,6 @@ notifee.displayNotification({
 });
 ```
 
-If no [foregroundServiceTypes](/react-native/docs/android/interaction#quick-actions) property is provided. The properties are taken from the manifest. If any permission was granted while running the service, the same notification (with the same notification ID and same channel ID) can be posted again with the new `foregroundServiceTypes` property array with the same notification ID and the current running service will be updated with the new types.
+If no [foregroundServiceTypes](/react-native/docs/android/interaction#quick-actions) property is provided, the types are taken from the manifest.
+
+If any permission was granted while running the service, the same notification (with the same notification ID and same channel ID) can be posted again with the new `foregroundServiceTypes` property array with the same notification ID and the current running service will be updated with the new types.
