@@ -17,7 +17,6 @@ package app.notifee.core;
   *
  */
 
-import android.util.Log;
 import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.Service;
@@ -29,6 +28,7 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationManagerCompat;
 
 import app.notifee.core.event.ForegroundServiceEvent;
+import app.notifee.core.event.NotificationEvent;
 import app.notifee.core.interfaces.MethodCallResult;
 import app.notifee.core.model.NotificationModel;
 
@@ -50,14 +50,10 @@ public class ForegroundService extends Service {
     intent.putExtra("notification", notification);
     intent.putExtra("notificationBundle", notificationBundle);
 
-    // TODO pass this config from notificationBundle
-    boolean startServiceWithPromise = false;
-
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && startServiceWithPromise) {
-      Log.d(TAG, "Using startForegroundService");
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
       ContextHolder.getApplicationContext().startForegroundService(intent);
     } else {
-      Log.d(TAG, "Using startService");
+      // TODO test this on older device
       ContextHolder.getApplicationContext().startService(intent);
     }
   }
