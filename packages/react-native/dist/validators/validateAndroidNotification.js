@@ -283,6 +283,25 @@ function validateAndroidNotification(android) {
         out.loopSound = android.loopSound;
     }
     /**
+     * foregroundServiceTypes
+     */
+    if ((0, utils_1.objectHasProperty)(android, 'foregroundServiceTypes') &&
+        !(0, utils_1.isUndefined)(android.foregroundServiceTypes)) {
+        if (!(0, utils_1.isArray)(android.foregroundServiceTypes)) {
+            throw new Error("'notification.android.foregroundServiceTypes' expected an array.");
+        }
+        if (android.foregroundServiceTypes.length === 0) {
+            throw new Error("'notification.android.foregroundServiceTypes' expected a non empty array containing AndroidForegroundServiceType.");
+        }
+        const defaults = Object.values(NotificationAndroid_2.AndroidForegroundServiceType);
+        for (let i = 0; i < android.foregroundServiceTypes.length; i++) {
+            if (!defaults.includes(android.foregroundServiceTypes[i])) {
+                throw new Error("'notification.android.foregroundServiceTypes' invalid array value, expected an AndroidForegroundServiceType value.");
+            }
+        }
+        out.foregroundServiceTypes = android.foregroundServiceTypes;
+    }
+    /**
      * flags
      */
     if ((0, utils_1.objectHasProperty)(android, 'flags') && !(0, utils_1.isUndefined)(android.flags)) {

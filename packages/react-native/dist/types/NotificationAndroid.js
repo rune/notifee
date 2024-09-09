@@ -3,7 +3,7 @@
  * Copyright (c) 2016-present Invertase Limited
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AndroidLaunchActivityFlag = exports.AndroidImportance = exports.AndroidVisibility = exports.AndroidStyle = exports.AndroidGroupAlertBehavior = exports.AndroidFlags = exports.AndroidDefaults = exports.AndroidColor = exports.AndroidCategory = exports.AndroidBadgeIconType = exports.AndroidNotificationSetting = void 0;
+exports.AndroidForegroundServiceType = exports.AndroidLaunchActivityFlag = exports.AndroidImportance = exports.AndroidVisibility = exports.AndroidStyle = exports.AndroidGroupAlertBehavior = exports.AndroidFlags = exports.AndroidDefaults = exports.AndroidColor = exports.AndroidCategory = exports.AndroidBadgeIconType = exports.AndroidNotificationSetting = void 0;
 /**
  * An interface representing the current android only notification-related settings for your app.
  *
@@ -377,4 +377,27 @@ var AndroidLaunchActivityFlag;
      */
     AndroidLaunchActivityFlag[AndroidLaunchActivityFlag["MATCH_EXTERNAL"] = 20] = "MATCH_EXTERNAL";
 })(AndroidLaunchActivityFlag = exports.AndroidLaunchActivityFlag || (exports.AndroidLaunchActivityFlag = {}));
+/**
+ * Enum used to set the foreground service types identifying the work done by the service.
+ * See Android's [foreground service types](https://developer.android.com/develop/background-work/services/fg-service-types) documentation.
+ *
+ * @platform android
+ */
+var AndroidForegroundServiceType;
+(function (AndroidForegroundServiceType) {
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_CAMERA"] = 64] = "FOREGROUND_SERVICE_TYPE_CAMERA";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE"] = 16] = "FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_DATA_SYNC"] = 1] = "FOREGROUND_SERVICE_TYPE_DATA_SYNC";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_HEALTH"] = 256] = "FOREGROUND_SERVICE_TYPE_HEALTH";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_LOCATION"] = 8] = "FOREGROUND_SERVICE_TYPE_LOCATION";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK"] = 2] = "FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION"] = 32] = "FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_MICROPHONE"] = 128] = "FOREGROUND_SERVICE_TYPE_MICROPHONE";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_PHONE_CALL"] = 4] = "FOREGROUND_SERVICE_TYPE_PHONE_CALL";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING"] = 512] = "FOREGROUND_SERVICE_TYPE_REMOTE_MESSAGING";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_SHORT_SERVICE"] = 2048] = "FOREGROUND_SERVICE_TYPE_SHORT_SERVICE";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_SPECIAL_USE"] = 1073741824] = "FOREGROUND_SERVICE_TYPE_SPECIAL_USE";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED"] = 1024] = "FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED";
+    AndroidForegroundServiceType[AndroidForegroundServiceType["FOREGROUND_SERVICE_TYPE_MANIFEST"] = -1] = "FOREGROUND_SERVICE_TYPE_MANIFEST";
+})(AndroidForegroundServiceType = exports.AndroidForegroundServiceType || (exports.AndroidForegroundServiceType = {}));
 //# sourceMappingURL=NotificationAndroid.js.map
